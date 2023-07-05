@@ -19,14 +19,14 @@ export const arrayDosUsuarios: Array<TUsers> = [
 
 export const arrayDosPordutos: Array<TProducts> = [
   {
-    id: "p1",
+    id: "p001",
     name: "Placa de video",
     price: 890,
     description: "Placa de video para computador",
     imageUrl: "link da imagem",
   },
   {
-    id: "p1",
+    id: "p002",
     name: "Headset Logitech",
     price: 300,
     description: "Placa de mae para computador",
@@ -73,4 +73,17 @@ export function createProduct(
     
   }
 
- 
+  export const getAllUsers = [...arrayDosUsuarios, createAllUsers]
+
+  export const getAllProducts = [...arrayDosPordutos, createProduct]
+
+
+  export const searchProductsByName = process.argv[2]
+  if(!searchProductsByName){
+    console.log("Falta passar o nome do produto")
+  }else{
+    const resultadoBusca = arrayDosPordutos.filter((produto) =>{
+      return(produto.name.toLowerCase().includes(searchProductsByName.toLowerCase()))
+    })
+    console.log(resultadoBusca)
+  }

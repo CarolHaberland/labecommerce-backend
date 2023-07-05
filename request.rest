@@ -1,0 +1,19 @@
+### Get all Users
+GET http://localhost:3003/users
+
+### GET ALL PRODUCTS
+GET http://localhost:3003/products
+
+### GET PRODUCTS BY NAME
+GET http://localhost:3003/products/search?name=Headset
+### GET PRODUCTS BY NAME
+PUT http://localhost:3003/products/p001
+content-type: application/json
+
+{
+    "id": "p003",
+    "name": "Teclado gamer RGB",
+    "price": 300,
+    "description": "Teclado mecânico com RGB e numpad",
+    "imageUrl": "https://picsum.photos/seed/Teclado%20gamer%20RGB/400"
+}
