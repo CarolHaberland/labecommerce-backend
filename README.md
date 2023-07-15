@@ -40,9 +40,9 @@ Implementação dos Endpoints:
 
 ## PARA EXECUTAR O PROJETO.
 
-Diginte no terminal o comando `npm run start`.
+Digite no terminal o comando `npm run start`.
 
-Espere até aparecer está confirmação: `Servidor rodando na porta 3003`.
+Espere até aparecer essa confirmação: `Servidor rodando na porta 3003`.
 
 ## TECNOLOGIAS UTILIZADAS NESTE PROJETO.
 
