@@ -6,7 +6,8 @@ GET http://localhost:3003/products
 
 ### GET PRODUCTS BY NAME
 GET http://localhost:3003/products/search?name=Headset
-### GET PRODUCTS BY NAME
+
+### EDIT PRODUCTS BY NAME
 PUT http://localhost:3003/products/p001
 content-type: application/json
 
