@@ -10,10 +10,10 @@ export const getProdById = async (req: Request, res: Response) => {
       SELECT * FROM products
       WHERE product_id = "${id}"
       `) */
-      if (productId == "p") {
+      /* if (productId == "p") {
         res.status(400);
         throw new Error('Id is invalid! Has to begin with the character "p"');
-      }
+      } */
       /* const findProductsId = arrayDosPordutos.find(
         (arrayDosPordutos) => arrayDosPordutos.id === id
       ); */

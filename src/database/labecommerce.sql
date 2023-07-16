@@ -21,7 +21,7 @@ CREATE TABLE products (
 -- CREATE TABLE PERCHASES
 CREATE TABLE purchases (
     id TEXT PRIMARY KEY NOT NULL,
-    total_price REAL,
+    total_price REAL NOT NULL,
     created_at TEXT DEFAULT (DATETIME()) NOT NULL,
     buyer TEXT NOT NULL,
     FOREIGN KEY (buyer) REFERENCES users (id)
@@ -62,15 +62,14 @@ VALUES
 ('pro005', 'Controle Dual Shock Usb Pc Dazz', 74.90, 'Controle Dual Shock para pc com entrada USB 2.0', 'img');
 
 
-INSERT INTO purchases (id, buyer)
+INSERT INTO purchases (id, buyer, total_price)
 VALUES
-('pur001', 'u002'),
-('pur002', 'u004');
+('pur003', 'u003', 754.99);
 
 SELECT * FROM purchases;
 
 INSERT INTO purchases_products ( product_id, purchases_id, quantity)
-VALUES ('pro001', 'pur001', 2), ('pro002', 'pur001', 4), ('pro003', 'pur001', 1);
+VALUES ('pro005', 'pur003', 2), ('pro001', 'pur003', 1);
 
 
 SELECT * FROM purchases_products;
@@ -107,8 +106,8 @@ WHERE id = 'u002';
 
 -- EDIT PRODUCTS BY ID
 UPDATE products
-SET name = '', price = 300, description = '', image_url = ''
-WHERE id ='p003';
+SET name = 'Teclado gamer RGB', price = 300, description = 'Teclado mecânico com RGB e numpad', image_url = 'https://picsum.photos/seed/Teclado%20gamer%20RGB/400'
+WHERE product_id ='pr005';
 
 
 -- DELETE USERS BY ID
@@ -117,7 +116,7 @@ WHERE id = 'u004';
 
 -- DELETE PRODUCTS BY ID
 DELETE FROM products
-WHERE id = 'p006';
+WHERE id = 'pro006';
 
 -- APAGA TODOS OS REGISTROS (PERIGO)
 DELETE FROM perchases;

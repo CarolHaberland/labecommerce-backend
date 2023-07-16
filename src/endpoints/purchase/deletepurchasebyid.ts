@@ -5,10 +5,17 @@ export const delPurchById = async (req: Request, res: Response) => {
     try {
       const id = req.params.id;
       const [purchasesId] = await db("purchases").where({ id: id });
-      if (purchasesId && purchasesId[0] == "p") {
+     /*  if (purchasesId !== undefined) {
+        if (typeof purchasesId !== "string") {
+          res.status(400);
+          throw new Error("Id is invalid! Only characteres allowed.");
+        }
+        if (purchasesId !== "pur") {
         res.status(400);
-        throw new Error('Id is invalid! Has to begin with the character "p"');
-      }
+        throw new Error('Id is invalid! Has to begin with the character "pur"');
+        }
+      } */
+      
       await db("purchases").del().where({ id: id });
       res.status(200).send("Pedido deletado com sucesso!");
     } catch (e) {

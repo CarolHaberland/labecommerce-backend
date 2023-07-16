@@ -8,10 +8,10 @@ export const delProdById = async (req: Request, res: Response) => {
       SELECT * FROM products
       WHERE product_id = "${id}"
       `);
-      if (productsId && productsId[0] !== "p") {
+      if (productsId[0] == "p") {
         res.status(400);
         throw new Error('Id is invalid! Has to begin with the character "p"');
-      }
+      } 
       await db.raw(`
       DELETE FROM products
       WHERE product_id = "${id}"
