@@ -35,7 +35,7 @@ Extra
 
 `Faça a cópia do link abaixo.`
 
---link
+---link
 
 `Use o comando git clone no terminal e logo em sequencia coloque o link, verifique antes se o diretorio está correto, e de enter`
 
