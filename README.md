@@ -26,17 +26,22 @@ Implementação dos Endpoints:
 - [`X`]  Delete purchase by id
 - [`X`]  Get purchase by id
 
+Extra
+
+- [`X`]  Get product by name
+
+
 ### COMO RODAR ESSE PROJETO.
 
 `Faça a cópia do link abaixo.`
 
---link
+---link
 
 `Use o comando git clone no terminal e logo em sequencia coloque o link, verifique antes se o diretorio está correto, e de enter`
 
 ## INSTALE AS DEPENDENCIAS.
 
-`npm i ou npm install`
+`npm i`
 
 ## PARA EXECUTAR O PROJETO.
 
@@ -55,6 +60,8 @@ Espere até aparecer essa confirmação: `Servidor rodando na porta 3003`.
 
 ## DOCUMENTAÇÃO POSTMAN.
 
+<a style="font-size: 20px" href="https://documenter.getpostman.com/view/26594598/2s946feYpf">Postman Documentation</a>
+ 
 ## PESSOA AUTORA.
 
 <a style="font-size: 20px" href="https://www.linkedin.com/in/carolina-haberland-a1173b119/">Linkedin</a> 

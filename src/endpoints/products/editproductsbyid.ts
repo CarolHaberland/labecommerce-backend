@@ -4,30 +4,30 @@ import { db } from "../../database/knex";
 export const editProdById =  async (req: Request, res: Response) => {
     try {
       const id = req.params.id;
-      const { id: newId, name, price, description, imageUrl } = req.body;
+      const { id: productId, name, price, description, imageUrl } = req.body;
   
-      if (newId !== undefined) {
-        if (typeof newId !== "string") {
+      if (productId !== undefined) {
+        if (typeof productId !== "string") {
           res.status(400);
           throw new Error("Id is invalid! Only characteres allowed.");
         }
-        if (newId === newId) {
+        /* if (newId === newId) {
           res.status(400);
           throw new Error("Id already exist! Please verify and try again.");
-        }
+        }  */
       }
-      const [ product ] = await db.select("*").from("products").where({ product_id: id })
+      const [ product ] = await db.select("*").from("products").where({ product_id: productId })
      /*  const findProducts = arrayDosPordutos.find((arrayDosPordutos) => {
         return arrayDosPordutos.id === id;
       }); */
       await db.update({
-        id: newId || product.id,
+        product_id: productId || product.productId, 
         name: name || product.name,
         price: price || product.price,
         description: description || product.description,
-        imageUrl: imageUrl || product.image_url,
+        image_url: imageUrl || product.image_url,
         
-      }).from("products").where({ product_id: id })
+      }).from("products").where({ product_id: productId })
       res.status(200).send("Atualizacao realizada com sucesso!")
   
       /* if (findProducts) {
