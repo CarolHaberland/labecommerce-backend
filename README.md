@@ -33,11 +33,13 @@ Extra
 
 ### COMO RODAR ESSE PROJETO.
 
+`Caso nessesário faça o Fork.`
+
 `Faça a cópia do link abaixo.`
 
----link
+<a style="font-size: 20px" href="https://github.com/CarolHaberland/labecommerce-backend.git"> Link do Repositório - Clique Aqui</a>
 
-`Use o comando git clone no terminal e logo em sequencia cole o link, verifique antes se o diretorio está correto, e de enter`
+`Use o comando git clone no terminal e logo em sequencia cole o link do repositório, verifique antes se o diretório está correto, e de enter.`
 
 ## INSTALE AS DEPENDENCIAS.
 
