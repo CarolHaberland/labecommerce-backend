@@ -5,8 +5,12 @@ export const getProdByName = async (req: Request, res: Response) => {
   //const {name} = req.query
   try {
     const name = req.query.name as string;
-    
-    const [productName] = await db("products").where('name', 'like', `%${name}%` );
+
+    const [productName] = await db("products").where(
+      "name",
+      "like",
+      `%${name}%`
+    );
 
     if (!name) {
       res.status(403).send("Search parameter not informed!");

@@ -37,7 +37,7 @@ Extra
 
 ---link
 
-`Use o comando git clone no terminal e logo em sequencia coloque o link, verifique antes se o diretorio está correto, e de enter`
+`Use o comando git clone no terminal e logo em sequencia cole o link, verifique antes se o diretorio está correto, e de enter`
 
 ## INSTALE AS DEPENDENCIAS.
 

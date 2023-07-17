@@ -1,8 +1,6 @@
-
 import express, { Request, Response } from "express";
 /* import { TProducts, TPurchase, TUsers } from "./types";
-import { db } from "./database/knex" */;
-import { getAllUsers } from "./endpoints/users/getallusers";
+import { db } from "./database/knex" */ import { getAllUsers } from "./endpoints/users/getallusers";
 import { getallproducts } from "./endpoints/products/getallproducts";
 import { getProdByName } from "./endpoints/products/getproductbyname";
 import { getProdById } from "./endpoints/products/getproductsbyid";
@@ -16,15 +14,6 @@ import { createPurchase } from "./endpoints/purchase/createpurchase";
 import { getPurchById } from "./endpoints/purchase/getpurchasebyid";
 import { delPurchById } from "./endpoints/purchase/deletepurchasebyid";
 
-/* console.table(arrayDosUsuarios)
-console.table(arrayDosPordutos) */
-
-/* createAllUsers("u003", "Astrodev", "astrodev@email.com", "astrodev99")
-console.table(arrayDosUsuarios)
-createProduct("prod003", "SSD gamer", 349.99, "Acelere seu sistema com velocidades incríveis de leitura e gravação.")
-console.table(arrayDosPordutos) */
-
-/* console.log(searchProductsByName)  */
 
 const app = express();
 var cors = require("cors");

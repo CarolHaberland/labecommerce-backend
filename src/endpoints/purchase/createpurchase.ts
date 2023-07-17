@@ -28,14 +28,12 @@ export const createPurchase = async (
 
     for (const product of [products]) {
       const newPurchProduct = {
-        purchases_id: id,  
-        product_id: product.id, 
-        quantity: product.quantity }
-      await db("purchases_products").insert(newPurchProduct)
+        purchases_id: id,
+        product_id: product.id,
+        quantity: product.quantity,
+      };
+      await db("purchases_products").insert(newPurchProduct);
     }
-
-   
-
     res.status(201).send("Purchase successfully registered!");
   } catch (e) {
     if (e instanceof Error) {
